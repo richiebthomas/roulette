@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Russian Roulette Simulator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Configuration Page -->
+  <div id="config-page" class="page">
+    <h1>Russian Roulette Setup</h1>
+    <div class="setup">
+      <div>
+        <label for="player-count">Number of Players: <span id="player-count-value">2</span></label>
+        <input type="range" id="player-count" min="2" max="6" value="2">
+      </div>
+      <div id="player-inputs">
+        <div class="player-input">
+          <label>Player 1 Name:</label>
+          <input type="text" class="player-name" value="Player 1">
+        </div>
+        <div class="player-input">
+          <label>Player 2 Name:</label>
+          <input type="text" class="player-name" value="Player 2">
+        </div>
+      </div>
+    </div>
+    <button id="start-game">Start Game</button>
+  </div>
+
+  <!-- Game Page -->
+  <div id="game-page" class="page hidden">
+    <h1>Russian Roulette</h1>
+    <div class="game-controls">
+      <label for="player-select">Select Player to Fire:</label>
+      <select id="player-select"></select>
+    </div>
+    <div id="gun-logo">🔫</div>
+    <div class="log">
+      <h2>Game Log</h2>
+      <div id="game-log"></div>
+    </div>
+    <button id="reset-game">Reset Game</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
